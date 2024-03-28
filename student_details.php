@@ -48,12 +48,16 @@
 
         .btn-back {
             background-color: #90caf9;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-back:hover {
+            background-color: #64b5f6;
+        }
     </style>
 </head>
 <body>
-    <h1>Student Details</h1>
-    <?php if (isset($student_details)): ?>
-    <h2><?php echo $student_details['full_name']; ?></h2>
     <p>Student ID: <?php echo $student_details['student_id']; ?></p>
     <p>Phone Number: <?php echo $student_details['phone_number']; ?></p>
     <p>Date of Birth: <?php echo $student_details['dob']; ?></p>
