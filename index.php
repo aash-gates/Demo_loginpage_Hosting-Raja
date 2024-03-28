@@ -13,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare SQL statement to retrieve user data
     $sql = "SELECT * FROM LoginCredentials WHERE username = '$username' AND password_hash = '$password'";
-    $result = $conn->query($sql);
     $result = $connection->query($sql);
 
     // Check if user exists and credentials are correct
