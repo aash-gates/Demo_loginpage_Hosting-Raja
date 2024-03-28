@@ -6,6 +6,7 @@ $db_password = ""; // Password for database access
 $db_name = "SMS.sql"; // Name of the database
 
 // Attempt to establish a connection to the database
+$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
     die("Connection failed: " . mysqli_connect_error());
 }
 ?>
