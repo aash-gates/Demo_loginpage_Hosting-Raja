@@ -58,9 +58,19 @@
     </style>
 </head>
 <body>
-    <?php else: ?>
-    <p>No student details found.</p>
-    <?php endif; ?>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Student Details</h2>
+            </div>
+            <div class="card-body student-details">
+                <?php if (isset($student_details)): ?>
+                    <p><strong>Name:</strong> <?php echo $student_details['full_name']; ?></p>
+                    <p><strong>Student ID:</strong> <?php echo $student_details['student_id']; ?></p>
+                    <p><strong>Phone Number:</strong> <?php echo $student_details['phone_number']; ?></p>
+                    <p><strong>Date of Birth:</strong> <?php echo $student_details['dob']; ?></p>
+                    <p><strong>Mother Tongue:</strong> <?php echo $student_details['mother_tongue']; ?></p>
+                    <p><strong>Blood Group:</strong> <?php echo $student_details['blood_group']; ?></p>
 </body>
 </html>
 
