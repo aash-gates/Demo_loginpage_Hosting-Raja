@@ -25,13 +25,9 @@
             transition: 0.3s;
         }
 
-        .card:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
         .card-header {
-            background-color: #f8bbd0;
-            color: #fff;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #333;
             font-weight: bold;
         }
 
@@ -40,7 +36,8 @@
         }
 
         .student-details p {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            font-size: 18px;
         }
 
         .student-details h2 {
@@ -48,9 +45,13 @@
         }
 
         .btn-back {
-            background-color: #90caf9;
-            color: #fff;
+            background-color: #fff;
+            color: #333;
             border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-right: 10px;
+            text-decoration: none;
         }
 
         .btn-back:hover {
