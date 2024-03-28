@@ -48,3 +48,13 @@
 
         .form-control:focus {
             border-color: #ccc;
+            outline: none;
+        }
+
+        .btn-save, .btn-discard, .btn-back {
+            background-color: #fff;
+            color: #333;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-right: 10px;
