@@ -38,6 +38,16 @@
             padding: 20px;
         }
 
+        .student-details p {
+            margin-bottom: 5px;
+        }
+
+        .student-details h2 {
+            margin-bottom: 20px;
+        }
+
+        .btn-back {
+            background-color: #90caf9;
     </style>
 </head>
 <body>
