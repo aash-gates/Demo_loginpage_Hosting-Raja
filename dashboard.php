@@ -56,5 +56,4 @@ $result_students = $connection->query($sql_students);
 
 <?php
 // Close database connection
-$conn->close();
 ?>
