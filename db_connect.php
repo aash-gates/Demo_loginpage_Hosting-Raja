@@ -1,4 +1,3 @@
-$db_name = "your_database_name"; // Name of the database
 
 // Attempt to establish a connection to the database
 $connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
