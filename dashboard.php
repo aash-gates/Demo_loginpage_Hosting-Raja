@@ -2,6 +2,7 @@
 // Include your db_connect.php file to establish a database connection
 include 'db_connect.php';
 
+// Check if connection is established
 // Retrieve total entries count
 $sql_count = "SELECT COUNT(*) AS total_entries FROM StudentRecords";
 $result_count = $conn->query($sql_count);
