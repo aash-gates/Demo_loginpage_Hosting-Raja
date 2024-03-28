@@ -84,8 +84,3 @@
     </div>
 </body>
 </html>
-
-<?php
-// Close database connection
-$connection->close();
-?>
