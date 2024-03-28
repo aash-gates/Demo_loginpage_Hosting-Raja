@@ -1,4 +1,3 @@
-$dbusername = "root";
 $dbpassword = "";
 // Create connection
 $conn = mysqli_connect($dbservername, $dbusername, $dbpassword);
