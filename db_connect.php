@@ -1,4 +1,3 @@
-// Database configuration
 $db_host = "localhost"; // Hostname of the database server
 $db_username = "your_username"; // Username for database access
 $db_password = "your_password"; // Password for database access
