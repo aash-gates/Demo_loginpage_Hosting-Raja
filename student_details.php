@@ -1,3 +1,13 @@
+<?php
+// Include your db_connect.php file to establish a database connection
+include 'db_connect.php';
+
+// Check if connection is established
+if (!$connection) {
+    // If connection failed, display error message and terminate script
+    die("Connection failed: " . mysqli_connect_error());
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
