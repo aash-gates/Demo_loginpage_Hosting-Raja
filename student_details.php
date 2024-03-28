@@ -56,6 +56,12 @@
 
         .btn-back:hover {
             background-color: #64b5f6;
+            text-decoration: none;
+        }
+
+        .btn-action:hover {
+            background-color: #fff;
+            color: #333;
         }
     </style>
 </head>
@@ -63,9 +69,11 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h2>Student Details</h2>
+                <h2>Student Profile</h2>
             </div>
             <div class="card-body student-details">
+                <?php 
+                // Include your db_connect.php file to establish a database connection
                 <?php if (isset($student_details)): ?>
                     <p><strong>Name:</strong> <?php echo $student_details['full_name']; ?></p>
                     <p><strong>Student ID:</strong> <?php echo $student_details['student_id']; ?></p>
