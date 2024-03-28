@@ -71,6 +71,17 @@
                     <p><strong>Date of Birth:</strong> <?php echo $student_details['dob']; ?></p>
                     <p><strong>Mother Tongue:</strong> <?php echo $student_details['mother_tongue']; ?></p>
                     <p><strong>Blood Group:</strong> <?php echo $student_details['blood_group']; ?></p>
+                    <p><strong>Known Dust Allergies:</strong> <?php echo $student_details['known_dust_allergies']; ?></p>
+                    <p><strong>Mother Name:</strong> <?php echo $student_details['mother_name']; ?></p>
+                    <p><strong>Father Name:</strong> <?php echo $student_details['father_name']; ?></p>
+                    <p><strong>Nationality:</strong> <?php echo $student_details['nationality']; ?></p>
+                <?php else: ?>
+                    <p>No student details found.</p>
+                <?php endif; ?>
+                <a href="dashboard.php" class="btn btn-back">Back to Dashboard</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 
