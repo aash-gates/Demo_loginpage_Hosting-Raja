@@ -107,10 +107,10 @@
                     <p><strong>Mother Name:</strong> <?php echo $student_details['mother_name']; ?></p>
                     <p><strong>Father Name:</strong> <?php echo $student_details['father_name']; ?></p>
                     <p><strong>Nationality:</strong> <?php echo $student_details['nationality']; ?></p>
-                <?php else: ?>
-                    <p>No student details found.</p>
+                    <a href="dashboard.php" class="btn btn-back">Back to Dashboard</a>
+                    <a href="edit_student.php?id=<?php echo $student_id; ?>" class="btn btn-action">Edit</a>
+                    <a href="delete_student.php?id=<?php echo $student_id; ?>" class="btn btn-action">Delete</a>
                 <?php endif; ?>
-                <a href="dashboard.php" class="btn btn-back">Back to Dashboard</a>
             </div>
         </div>
     </div>
