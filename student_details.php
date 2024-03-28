@@ -13,7 +13,6 @@ if (isset($_GET['id'])) {
     $student_id = $_GET['id'];
     
     $sql_student_details = "SELECT * FROM StudentRecords WHERE student_id = $student_id";
-    $result_student_details = $conn->query($sql_student_details);
     
     if ($result_student_details->num_rows > 0) {
         $student_details = $result_student_details->fetch_assoc();
