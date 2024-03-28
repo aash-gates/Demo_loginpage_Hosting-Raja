@@ -28,6 +28,16 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
+        .card-header {
+            background-color: #f8bbd0;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
     </style>
 </head>
 <body>
