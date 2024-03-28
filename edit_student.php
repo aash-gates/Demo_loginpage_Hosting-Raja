@@ -19,3 +19,12 @@
             margin-top: 50px;
         }
 
+        .card {
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .card-header {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #333;
