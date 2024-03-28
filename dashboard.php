@@ -4,6 +4,7 @@ include 'db_connect.php';
 
 // Check if connection is established
 if (!$connection) {
+    // If connection failed, display error message and terminate script
 // Retrieve total entries count
 $sql_count = "SELECT COUNT(*) AS total_entries FROM StudentRecords";
 $result_count = $conn->query($sql_count);
