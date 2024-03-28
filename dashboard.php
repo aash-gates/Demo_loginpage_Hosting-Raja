@@ -16,6 +16,7 @@ $total_entries = ($result_count->num_rows > 0) ? $result_count->fetch_assoc()['t
 // Retrieve full name and student ID of all students
 $sql_students = "SELECT full_name, student_id FROM StudentRecords";
 $result_students = $conn->query($sql_students);
+$result_students = $connection->query($sql_students);
 ?>
 
 <!DOCTYPE html>
