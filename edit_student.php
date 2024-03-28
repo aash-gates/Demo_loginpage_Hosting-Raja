@@ -78,3 +78,13 @@
                 include 'db_connect.php';
 
                 // Retrieve student details based on the ID passed through GET parameter
+                if (isset($_GET['id'])) {
+                    $student_id = $_GET['id'];
+                    
+                    // Prepare the SQL statement to prevent SQL injection
+                    $sql_student_details = $connection->prepare("SELECT * FROM StudentRecords WHERE student_id = ?");
+                    $sql_student_details->bind_param("i", $student_id);
+                    $sql_student_details->execute();
+                    $result_student_details = $sql_student_details->get_result();
+                    
+                    if ($result_student_details->num_rows > 0) {
