@@ -1,4 +1,3 @@
-$conn = mysqli_connect($dbservername, $dbusername, $dbpassword);
 // Check connection
 if (!$conn) {
     echo "Connected unsuccessfully";
