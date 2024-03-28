@@ -98,7 +98,7 @@
                         <?php endif; ?>
                     <?php endforeach; ?>
                     <a href="edit_student.php?id=<?php echo $student_id; ?>" class="btn btn-edit">Edit</a>
-                    <a href="delete_student.php?id=<?php echo $student_id; ?>" class="btn btn-delete">Delete</a>
+                    <a href="delete_student.php?id=<?php echo $student_id; ?>" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this student record?')">Delete</a>
                     <a href="dashboard.php" class="btn btn-back">Back to Dashboard</a>
                 <?php endif; ?>
             </div>
