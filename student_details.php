@@ -55,7 +55,16 @@
         }
 
         .btn-back:hover {
-            background-color: #64b5f6;
+            background-color: #eee;
+        }
+
+        .btn-action {
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-right: 10px;
             text-decoration: none;
         }
 
@@ -119,6 +128,8 @@
 
 <?php
 // Close prepared statement and database connection
-$sql_student_details->close();
+if (isset($sql_student_details)) {
+    $sql_student_details->close();
+}
 $connection->close();
 ?>
