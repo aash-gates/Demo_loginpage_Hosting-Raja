@@ -8,6 +8,16 @@ if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+// Retrieve student details based on the ID passed through GET parameter
+if (isset($_GET['id'])) {
+    $student_id = $_GET['id'];
+    
+    // Prepare the SQL statement to prevent SQL injection
+    $sql_student_details = $connection->prepare("SELECT * FROM StudentRecords WHERE student_id = ?");
+    $sql_student_details->bind_param("i", $student_id);
+    $sql_student_details->execute();
+    $result_student_details = $sql_student_details->get_result();
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
