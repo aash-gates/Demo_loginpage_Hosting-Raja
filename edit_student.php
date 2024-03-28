@@ -28,3 +28,13 @@
         .card-header {
             background-color: rgba(255, 255, 255, 0.5);
             color: #333;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
