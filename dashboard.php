@@ -10,7 +10,6 @@ if (!$connection) {
 
 // Retrieve total entries count
 $sql_count = "SELECT COUNT(*) AS total_entries FROM StudentRecords";
-$result_count = $conn->query($sql_count);
 $result_count = $connection->query($sql_count);
 $total_entries = ($result_count->num_rows > 0) ? $result_count->fetch_assoc()['total_entries'] : 0;
 
