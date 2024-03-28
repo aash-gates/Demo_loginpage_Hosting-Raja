@@ -68,3 +68,13 @@
 </head>
 <body>
     <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Edit Student</h2>
+            </div>
+            <div class="card-body">
+                <?php 
+                // Include your db_connect.php file to establish a database connection
+                include 'db_connect.php';
+
+                // Retrieve student details based on the ID passed through GET parameter
