@@ -58,16 +58,6 @@
     </style>
 </head>
 <body>
-    <p>Student ID: <?php echo $student_details['student_id']; ?></p>
-    <p>Phone Number: <?php echo $student_details['phone_number']; ?></p>
-    <p>Date of Birth: <?php echo $student_details['dob']; ?></p>
-    <p>Mother Tongue: <?php echo $student_details['mother_tongue']; ?></p>
-    <p>Blood Group: <?php echo $student_details['blood_group']; ?></p>
-    <p>Known Dust Allergies: <?php echo $student_details['known_dust_allergies']; ?></p>
-    <p>Mother Name: <?php echo $student_details['mother_name']; ?></p>
-    <p>Father Name: <?php echo $student_details['father_name']; ?></p>
-    <p>Nationality: <?php echo $student_details['nationality']; ?></p>
-    <!-- Display other student details here -->
     <?php else: ?>
     <p>No student details found.</p>
     <?php endif; ?>
