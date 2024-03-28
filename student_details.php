@@ -47,6 +47,7 @@ if (isset($_GET['id'])) {
     <p>Known Dust Allergies: <?php echo $student_details['known_dust_allergies']; ?></p>
     <p>Mother Name: <?php echo $student_details['mother_name']; ?></p>
     <p>Father Name: <?php echo $student_details['father_name']; ?></p>
+    <p>Nationality: <?php echo $student_details['nationality']; ?></p>
     <!-- Display other student details here -->
     <?php else: ?>
     <p>No student details found.</p>
