@@ -1,4 +1,3 @@
-$dbservername = "localhost";
 $dbusername = "root";
 $dbpassword = "";
 // Create connection
