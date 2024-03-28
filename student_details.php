@@ -34,10 +34,8 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Details</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <style>
+        /* CSS styles here */
         body {
             background-color: #f9f9f9;
             font-family: Arial, sans-serif;
@@ -114,3 +112,9 @@ if (isset($_GET['id'])) {
     </div>
 </body>
 </html>
+
+<?php
+// Close prepared statement and database connection
+$sql_student_details->close();
+$connection->close();
+?>
