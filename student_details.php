@@ -1,13 +1,3 @@
-    if ($result_student_details->num_rows > 0) {
-        $student_details = $result_student_details->fetch_assoc();
-    } else {
-        echo "Student not found.";
-    }
-} else {
-    echo "Invalid request.";
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
