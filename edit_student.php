@@ -108,3 +108,26 @@
                             <label for="phone_number">Phone Number</label>
                             <input type="text" class="form-control" id="phone_number" name="phone_number" value="<?php echo $student_details['phone_number']; ?>">
                         </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" class="form-control" id="dob" name="dob" value="<?php echo $student_details['dob']; ?>">
+                        </div>
+                        <!-- Add other fields here -->
+                        <button type="submit" class="btn btn-save">Save</button>
+                        <a href="student_details.php?id=<?php echo $student_id; ?>" class="btn btn-discard">Discard</a>
+                        <a href="student_details.php?id=<?php echo $student_id; ?>" class="btn btn-back">Back to Student Page</a>
+                    </form>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<?php
+// Close prepared statement and database connection
+if (isset($sql_student_details)) {
+    $sql_student_details->close();
+}
+$connection->close();
+?>
