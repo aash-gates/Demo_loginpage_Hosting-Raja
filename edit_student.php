@@ -88,3 +88,13 @@
                     $result_student_details = $sql_student_details->get_result();
                     
                     if ($result_student_details->num_rows > 0) {
+                        $student_details = $result_student_details->fetch_assoc();
+                    } else {
+                        echo "<p>No student details found for ID: " . $student_id . "</p>";
+                    }
+                } else {
+                    echo "<p>Invalid request.</p>";
+                }
+                ?>
+
+                <?php if (isset($student_details)): ?>
