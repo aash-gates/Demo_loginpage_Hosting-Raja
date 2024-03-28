@@ -1,4 +1,3 @@
-
 // Check if the connection was successful
 if (!$connection) {
     // If connection failed, display error message and terminate script
