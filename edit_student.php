@@ -58,3 +58,13 @@
             border-radius: 20px;
             padding: 10px 20px;
             margin-right: 10px;
+            text-decoration: none;
+        }
+
+        .btn-save:hover, .btn-discard:hover, .btn-back:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
