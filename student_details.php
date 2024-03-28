@@ -74,6 +74,16 @@
             <div class="card-body student-details">
                 <?php 
                 // Include your db_connect.php file to establish a database connection
+                include 'db_connect.php';
+
+                // Retrieve student details based on the ID passed through GET parameter
+                if (isset($_GET['id'])) {
+                    $student_id = $_GET['id'];
+                    
+                    // Prepare the SQL statement to prevent SQL injection
+                    $sql_student_details = $connection->prepare("SELECT * FROM StudentRecords WHERE student_id = ?");
+                    $sql_student_details->bind_param("i", $student_id);
+                    $sql_student_details->execute();
                 <?php if (isset($student_details)): ?>
                     <p><strong>Name:</strong> <?php echo $student_details['full_name']; ?></p>
                     <p><strong>Student ID:</strong> <?php echo $student_details['student_id']; ?></p>
