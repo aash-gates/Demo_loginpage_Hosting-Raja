@@ -38,3 +38,13 @@
         .form-group {
             margin-bottom: 20px;
         }
+
+        .form-control {
+            border: none;
+            border-bottom: 2px solid #fff;
+            background-color: transparent;
+            color: #fff;
+        }
+
+        .form-control:focus {
+            border-color: #ccc;
