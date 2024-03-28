@@ -34,88 +34,89 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        /* CSS styles here */
+        /* Custom CSS styles here */
         body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            background: linear-gradient(to right, #b92b27, #1565c0);
+            color: #000;
+            overflow-x: hidden;
+            height: 100%;
+            background-image: linear-gradient(to right, #D500F9, #FFD54F);
+            background-repeat: no-repeat;
         }
 
-        .card {
+        .container {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        input, textarea {
+            background-color: #F3E5F5;
+            border-radius: 50px !important;
+            padding: 12px 15px 12px 15px !important;
+            width: 100%;
+            box-sizing: border-box;
+            border: none !important;
+            border: 1px solid #F3E5F5 !important;
+            font-size: 16px !important;
+            color: #000 !important;
+            font-weight: 400;
             margin-bottom: 20px;
-            border: none;
         }
 
-        .box {
-            width: 500px;
-            padding: 40px;
+        input:focus, textarea:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: 1px solid #D500F9 !important;
+            outline-width: 0;
+            font-weight: 400;
+        }
+
+        .btn-color {
+            border-radius: 50px;
+            color: #fff;
+            background-image: linear-gradient(to right, #FFD54F, #D500F9);
+            padding: 15px;
+            cursor: pointer;
+            border: none !important;
+        }
+
+        .btn-color:hover {
+            color: #fff;
+            background-image: linear-gradient(to right, #D500F9, #FFD54F);
+        }
+
+        .form-container {
             position: absolute;
             top: 50%;
             left: 50%;
-            background: #191919;
-            text-align: center;
-            transition: 0.25s;
-            margin-top: 100px;
             transform: translate(-50%, -50%);
-        }
-
-        .box input[type="text"],
-        .box input[type="password"] {
-            border: 0;
-            background: none;
-            display: block;
-            margin: 20px auto;
-            text-align: center;
-            border: 2px solid #3498db;
-            padding: 10px 10px;
-            width: 250px;
-            outline: none;
-            color: white;
-            border-radius: 24px;
-            transition: 0.25s;
-        }
-
-        .box h1 {
-            color: white;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-
-        .box input[type="text"]:focus,
-        .box input[type="password"]:focus {
             width: 300px;
-            border-color: #2ecc71;
-        }
-
-        .box input[type="submit"] {
-            border: 0;
-            background: none;
-            display: block;
-            margin: 20px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
             text-align: center;
-            border: 2px solid #2ecc71;
-            padding: 14px 40px;
-            outline: none;
-            color: white;
-            border-radius: 24px;
-            transition: 0.25s;
-            cursor: pointer;
-        }
-
-        .box input[type="submit"]:hover {
-            background: #2ecc71;
         }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>Login</h1>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Login">
-        </form>
+    <div class="container">
+        <div class="form-container">
+            <h3>Login</h3>
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                <input type="text" id="username" name="username" placeholder="Username" class="form-control" required>
+                <input type="password" id="password" name="password" placeholder="Password" class="form-control" required>
+                <button type="submit" class="btn-color">Login</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
