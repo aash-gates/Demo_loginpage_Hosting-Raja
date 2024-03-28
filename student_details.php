@@ -2,6 +2,7 @@
 // Include your db_connect.php file to establish a database connection
 include 'db_connect.php';
 
+// Check if connection is established
 // Retrieve student details based on the ID passed through GET parameter
 if (isset($_GET['id'])) {
     $student_id = $_GET['id'];
