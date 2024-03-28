@@ -84,8 +84,20 @@
                     $sql_student_details = $connection->prepare("SELECT * FROM StudentRecords WHERE student_id = ?");
                     $sql_student_details->bind_param("i", $student_id);
                     $sql_student_details->execute();
+                    $result_student_details = $sql_student_details->get_result();
+                    
+                    if ($result_student_details->num_rows > 0) {
+                        $student_details = $result_student_details->fetch_assoc();
+                    } else {
+                        echo "<p>No student details found for ID: " . $student_id . "</p>";
+                    }
+                } else {
+                    echo "<p>Invalid request.</p>";
+                }
+                ?>
+
                 <?php if (isset($student_details)): ?>
-                    <p><strong>Name:</strong> <?php echo $student_details['full_name']; ?></p>
+                    <h2><?php echo $student_details['full_name']; ?></h2>
                     <p><strong>Student ID:</strong> <?php echo $student_details['student_id']; ?></p>
                     <p><strong>Phone Number:</strong> <?php echo $student_details['phone_number']; ?></p>
                     <p><strong>Date of Birth:</strong> <?php echo $student_details['dob']; ?></p>
