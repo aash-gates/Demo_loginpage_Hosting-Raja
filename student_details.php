@@ -3,6 +3,7 @@
 include 'db_connect.php';
 
 // Check if connection is established
+if (!$connection) {
 // Retrieve student details based on the ID passed through GET parameter
 if (isset($_GET['id'])) {
     $student_id = $_GET['id'];
