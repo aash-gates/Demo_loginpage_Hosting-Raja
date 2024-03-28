@@ -7,6 +7,7 @@ if (!$connection) {
     // If connection failed, display error message and terminate script
     die("Connection failed: " . mysqli_connect_error());
 }
+
 // Retrieve total entries count
 $sql_count = "SELECT COUNT(*) AS total_entries FROM StudentRecords";
 $result_count = $conn->query($sql_count);
