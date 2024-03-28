@@ -98,3 +98,13 @@
                 ?>
 
                 <?php if (isset($student_details)): ?>
+                    <form action="update_student.php" method="post">
+                        <input type="hidden" name="student_id" value="<?php echo $student_id; ?>">
+                        <div class="form-group">
+                            <label for="full_name">Full Name</label>
+                            <input type="text" class="form-control" id="full_name" name="full_name" value="<?php echo $student_details['full_name']; ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone_number">Phone Number</label>
+                            <input type="text" class="form-control" id="phone_number" name="phone_number" value="<?php echo $student_details['phone_number']; ?>">
+                        </div>
