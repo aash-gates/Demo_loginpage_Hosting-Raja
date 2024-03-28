@@ -44,6 +44,7 @@ if (isset($_GET['id'])) {
     <p>Date of Birth: <?php echo $student_details['dob']; ?></p>
     <p>Mother Tongue: <?php echo $student_details['mother_tongue']; ?></p>
     <p>Blood Group: <?php echo $student_details['blood_group']; ?></p>
+    <p>Mother Name: <?php echo $student_details['mother_name']; ?></p>
     <!-- Display other student details here -->
     <?php else: ?>
     <p>No student details found.</p>
