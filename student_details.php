@@ -5,6 +5,7 @@ include 'db_connect.php';
 // Check if connection is established
 if (!$connection) {
     // If connection failed, display error message and terminate script
+    die("Connection failed: " . mysqli_connect_error());
 // Retrieve student details based on the ID passed through GET parameter
 if (isset($_GET['id'])) {
     $student_id = $_GET['id'];
