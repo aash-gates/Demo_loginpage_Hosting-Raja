@@ -14,20 +14,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Prepare SQL statement to retrieve user data
     $sql = "SELECT * FROM LoginCredentials WHERE username = '$username' AND password_hash = '$password'";
     $result = $conn->query($sql);
+    $result = $connection->query($sql);
 
     // Check if user exists and credentials are correct
     if ($result->num_rows > 0) {
-        // Redirect to students page upon successful login
-        header("Location: studentspage.php");
-        exit;
+        // Redirect to dashboard upon successful login
+        header("Location: dashboard.php");
+        exit; // Make sure to exit after redirection
     } else {
         // Display error message for invalid credentials
         echo "<script>alert('Invalid username or password');</script>";
     }
 }
-
-// Close database connection (if needed)
-//$conn->close();
 ?>
 
 <!DOCTYPE html>
