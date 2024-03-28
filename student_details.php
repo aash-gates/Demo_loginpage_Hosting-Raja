@@ -57,5 +57,4 @@ if (isset($_GET['id'])) {
 
 <?php
 // Close database connection
-$conn->close();
 ?>
