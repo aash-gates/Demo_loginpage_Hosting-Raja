@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Details</title>
+    <title>Student Profile</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <style>
         /* CSS styles here */
         body {
-            background-color: #f9f9f9;
             font-family: Arial, sans-serif;
-            color: #333;
+            background: linear-gradient(to right, #FF416C, #FF4B2B);
+            color: #fff;
         }
 
         .container {
@@ -17,7 +20,7 @@
         }
 
         .card {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.2);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
         }
